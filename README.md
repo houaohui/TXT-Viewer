@@ -1,4 +1,5 @@
-#based on nwatch
+```
+based on nwatch
 
 @演示：如果字符缓冲区是:char *buf = "he\rllo,th\ris is a test.\ncan you see something here?\nIf you can see some words\n
                                      This test may have succeeded!\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n"
@@ -62,10 +63,11 @@
        彩色屏幕将会比较简单，因为一个像素点是多个字节，只需要判断像素点的坐标与窗口的关系即可
 @使用示例：
        SETUP:
-           txtViewer_init(&txtViewer,1024,0,0,NORMAL);
+           txtViewer_init(&txtViewer,buf_size,0,0,NORMAL);
        LOOP:
            txtViewer.loop_show = true;
            txtViewer.run(&txtViewer);
+```
 
 
 

@@ -62,10 +62,14 @@ based on nwatch
        复杂，因为每个数据bit就是一个像素点，在写数据时需要时刻注意窗口位置，写数据位置，窗口大小的关系会经常出现窗口边沿分割图像数据的情况，
        彩色屏幕将会比较简单，因为一个像素点是多个字节，只需要判断像素点的坐标与窗口的关系即可
 @使用示例：
-       SETUP:
-           txtViewer_init(&txtViewer,buf_size,0,0,NORMAL);
-       LOOP:
+       keypress:
+           apis();
+       not loop show to loop show:
            txtViewer.loop_show = true;
+           
+       SETUP:
+           txtViewer_init(&txtViewer,buf_size,win_x,win_y,NORMAL);
+       LOOP:
            txtViewer.run(&txtViewer);
 ```
 
